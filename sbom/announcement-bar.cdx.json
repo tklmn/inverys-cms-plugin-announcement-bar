@@ -4,10 +4,10 @@
     "metadata": {
         "component": {
             "type": "library",
-            "name": "nioteq/announcement-bar",
+            "name": "inverys/announcement-bar",
             "version": "1.0.3",
             "description": "Displays a configurable announcement bar at the top of every frontend page.",
-            "purl": "pkg:composer/nioteq/announcement-bar@1.0.3",
+            "purl": "pkg:composer/inverys/announcement-bar@1.0.3",
             "licenses": [
                 { "license": { "id": "MIT" } }
             ]

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.0] - 2026-10-05
+
+### Changed
+- **Breaking:** renamed for Inverys CMS. The package is now `inverys/announcement-bar` with the Composer type `inverys-plugin`, and its settings live under `extra.inverys`. Requires Inverys CMS; for older CMS versions stay on 1.x.
+
 ## [1.0.3] - 2026-07-10
 
 ### Added
@@ -44,5 +49,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dismissible option for visitors
 - Fixed positioning with automatic body padding
 - Full English and German translations
-- Composer package support (`nioteq-plugin` type)
+- Composer package support (`inverys-plugin` type)
 - ZIP upload support for manual installation

@@ -1,7 +1,7 @@
 # Security Policy
 
 This package is the **Announcement Bar** plugin for
-[Nioteq CMS](https://github.com/tklmn/nioteq-cms). It runs inside the CMS and
+[Inverys CMS](https://github.com/tklmn/inverys-cms). It runs inside the CMS and
 inherits the host's security controls (nonce-based CSP, RBAC, CSRF, rate limiting).
 
 ## Supported Versions

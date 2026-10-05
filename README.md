@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Nioteq_CMS-Plugin-6366f1?style=for-the-badge" alt="Nioteq CMS Plugin">
+  <img src="https://img.shields.io/badge/Inverys_CMS-Plugin-6366f1?style=for-the-badge" alt="Inverys CMS Plugin">
   <img src="https://img.shields.io/badge/Version-1.0.0-22c55e?style=for-the-badge" alt="Version 1.0.0">
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License">
   <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+">
@@ -7,7 +7,7 @@
 
 # :loudspeaker: Announcement Bar
 
-A fully configurable announcement bar plugin for [Nioteq CMS](https://github.com/tklmn/nioteq-cms). Display important messages, promotions, or alerts at the top or bottom of every frontend page.
+A fully configurable announcement bar plugin for [Inverys CMS](https://github.com/tklmn/inverys-cms). Display important messages, promotions, or alerts at the top or bottom of every frontend page.
 
 ---
 
@@ -35,10 +35,10 @@ A fully configurable announcement bar plugin for [Nioteq CMS](https://github.com
 ### Option B: Composer
 
 ```bash
-composer require nioteq/announcement-bar
+composer require inverys/announcement-bar
 ```
 
-The CMS auto-discovers Composer packages with type `nioteq-plugin`. Enable the plugin in **Backend > Plugins**.
+The CMS auto-discovers Composer packages with type `inverys-plugin`. Enable the plugin in **Backend > Plugins**.
 
 ---
 
@@ -80,7 +80,7 @@ announcement-bar/
 
 ## :book: How It Works
 
-The plugin uses the Nioteq CMS Plugin SDK:
+The plugin uses the Inverys CMS Plugin SDK:
 
 - **`registerBodyHook()`** — injects the bar HTML before `</body>` on every frontend page
 - **`registerSidebarItem()`** — adds a settings link in the backend sidebar
@@ -99,7 +99,7 @@ The plugin ships with English and German translations. To add a new language, cr
 
 ## :page_facing_up: Requirements
 
-- **Nioteq CMS** >= 2.0
+- **Inverys CMS** >= 2.0
 - **PHP** >= 8.2
 
 ## :handshake: Author

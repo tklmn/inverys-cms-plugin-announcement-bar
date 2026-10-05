@@ -1,14 +1,14 @@
 {
-    "name": "nioteq/announcement-bar",
+    "name": "inverys/announcement-bar",
     "description": "Displays a configurable announcement bar at the top of every frontend page.",
-    "type": "nioteq-plugin",
-    "version": "1.0.3",
+    "type": "inverys-plugin",
+    "version": "2.0.0",
     "license": "MIT",
     "authors": [
         { "name": "Tom Kilimann", "email": "tkilimann@icloud.com" }
     ],
     "extra": {
-        "nioteq": {
+        "inverys": {
             "slug": "announcement-bar"
         }
     },

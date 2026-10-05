@@ -1,7 +1,7 @@
 {
     "slug": "announcement-bar",
     "name": "Announcement Bar",
-    "version": "1.0.3",
+    "version": "2.0.0",
     "description": "Displays a configurable announcement bar at the top of every frontend page. Supports custom message, colors, and dismissal.",
     "author": "Tom Kilimann",
     "provider": "Plugins\\AnnouncementBar\\AnnouncementBarServiceProvider",
