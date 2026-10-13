@@ -1,0 +1,53 @@
+name: Release package
+
+# Builds the installable package of a release — the package folder without
+# repository-only files — and attaches it to the GitHub release as
+# <slug>-<version>.zip plus its SHA-256 checksum. Marketplace catalogs point
+# to exactly this file: GitHub's automatic source archives are generated on
+# request, so their checksum is not guaranteed to stay the same.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to build the package for (e.g. 1.0.0)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    name: Build package
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      MANIFEST: plugin.json
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Build the package
+        run: |
+          VERSION="${TAG#v}"
+          SLUG=$(jq -r .slug "$MANIFEST")
+          MANIFEST_VERSION=$(jq -r .version "$MANIFEST")
+          if [ "$MANIFEST_VERSION" != "$VERSION" ]; then
+            echo "::error::$MANIFEST says $MANIFEST_VERSION, the tag says $VERSION"
+            exit 1
+          fi
+          OUT="${SLUG}-${VERSION}.zip"
+          mkdir -p "build/$SLUG"
+          git archive "$TAG" | tar -x -C "build/$SLUG"
+          rm -rf "build/$SLUG/.github"
+          (cd build && zip -r -q -X "../$OUT" "$SLUG")
+          sha256sum "$OUT" > "$OUT.sha256"
+          echo "OUT=$OUT" >> "$GITHUB_ENV"
+
+      - name: Attach to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$TAG" "$OUT" "$OUT.sha256" --clobber

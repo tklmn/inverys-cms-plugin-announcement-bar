@@ -1,0 +1,17 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "metadata": {
+        "component": {
+            "type": "library",
+            "name": "inverys/announcement-bar",
+            "version": "1.0.0",
+            "description": "Displays a configurable announcement bar at the top of every frontend page.",
+            "purl": "pkg:composer/inverys/announcement-bar@1.0.0",
+            "licenses": [
+                { "license": { "id": "MIT" } }
+            ]
+        }
+    },
+    "components": []
+}

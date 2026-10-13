@@ -1,0 +1,12 @@
+{
+    "slug": "announcement-bar",
+    "name": "Announcement Bar",
+    "version": "1.0.0",
+    "screenshot": "assets/screenshot.png",
+    "description": "Displays a configurable announcement bar at the top of every frontend page. Supports custom message, colors, and dismissal.",
+    "author": "Tom Kilimann",
+    "repository": "tklmn/inverys-cms-plugin-announcement-bar",
+    "provider": "Plugins\\AnnouncementBar\\AnnouncementBarServiceProvider",
+    "settings_route": "backend.announcement-bar.settings",
+    "search_keywords": "announcement-bar::ab.search_keywords"
+}
